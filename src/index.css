@@ -2,87 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* SHElytics Design System - Women Safety Analytics
+   An empowering, trustworthy, and calming aesthetic */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core brand colors - Trustworthy indigo with feminine coral accent */
+    --background: 210 25% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep indigo for trust and security */
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft lavender */
+    --secondary: 252 94% 96%;
+    --secondary-foreground: 239 84% 67%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft grey with lavender tint */
+    --muted: 240 20% 96%;
+    --muted-foreground: 240 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Coral rose for feminine touch */
+    --accent: 347 77% 62%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - For emergencies */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 20% 90%;
+    --input: 240 20% 90%;
+    --ring: 239 84% 67%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Safety Status Colors */
+    --safe: 152 82% 39%;
+    --safe-foreground: 0 0% 100%;
+    --safe-muted: 152 76% 95%;
+    
+    --at-risk: 43 96% 56%;
+    --at-risk-foreground: 0 0% 0%;
+    --at-risk-muted: 43 96% 94%;
+    
+    --emergency: 0 84% 60%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-muted: 0 84% 95%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(239 84% 67%) 0%, hsl(280 80% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(347 77% 62%) 0%, hsl(347 90% 72%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(152 82% 39%) 0%, hsl(152 82% 49%) 100%);
+    --gradient-emergency: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(0 84% 50%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px rgba(99, 102, 241, 0.1);
+    --shadow-md: 0 4px 16px -4px rgba(99, 102, 241, 0.15);
+    --shadow-lg: 0 8px 32px -8px rgba(99, 102, 241, 0.2);
+    --shadow-sos: 0 0 60px rgba(244, 63, 94, 0.4);
+    --shadow-safe: 0 4px 20px rgba(34, 197, 94, 0.3);
+
+    /* SOS Button */
+    --sos-gradient: linear-gradient(180deg, hsl(0 84% 60%) 0%, hsl(0 72% 50%) 100%);
+    --sos-glow: 0 0 40px 10px rgba(244, 63, 94, 0.5);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 239 84% 67%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 239 30% 15%;
+    --secondary-foreground: 239 84% 67%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 347 77% 62%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 239 84% 67%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -99,7 +131,134 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Glass morphism card */
+  .glass-card {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* SOS Button styles */
+  .sos-button {
+    background: var(--sos-gradient);
+    box-shadow: var(--sos-glow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sos-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px 15px rgba(244, 63, 94, 0.6);
+  }
+
+  .sos-button:active {
+    transform: scale(0.95);
+  }
+
+  /* Pulsing animation for SOS */
+  .sos-pulse {
+    animation: sos-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes sos-pulse {
+    0%, 100% {
+      box-shadow: 0 0 40px 10px rgba(244, 63, 94, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 60px 20px rgba(244, 63, 94, 0.7);
+    }
+  }
+
+  /* Status badge styles */
+  .status-safe {
+    @apply bg-[hsl(var(--safe))] text-[hsl(var(--safe-foreground))];
+  }
+
+  .status-at-risk {
+    @apply bg-[hsl(var(--at-risk))] text-[hsl(var(--at-risk-foreground))];
+  }
+
+  .status-emergency {
+    @apply bg-[hsl(var(--emergency))] text-[hsl(var(--emergency-foreground))];
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Safe zone indicator */
+  .safe-zone-ring {
+    animation: safe-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes safe-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.5);
+    }
+  }
+
+  /* Slide up animation */
+  .slide-up {
+    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Map overlay gradient */
+  .map-overlay-bottom {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
